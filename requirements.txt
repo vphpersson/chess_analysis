@@ -1,0 +1,6 @@
+httpx
+chess
+-e git+ssh://git@github.com/vphpersson/chess_com_extractor.git#egg=chess_com_extractor
+-e git+ssh://git@github.com/vphpersson/pyutils.git#egg=pyutils
+-e git+ssh://git@github.com/vphpersson/terminal_utils.git#egg=terminal_utils
+graphviz
