@@ -83,7 +83,7 @@ class ChessPositionTrieNode:
             if current_situation_trie_node.best_move is None:
                 # Find the best move for the current position. If the last move resulted in a new node, we can use the
                 # analysis results of that position.
-                best_move: Move = (starting_info or await engine.analyse(board, Limit(depth=self.ANALYSIS_DEPTH)))['pv'][0]
+                best_move: Move = (starting_info or await engine.analyse(board, limit=Limit(depth=self.ANALYSIS_DEPTH)))['pv'][0]
 
                 board.push(best_move)
 

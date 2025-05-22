@@ -1,6 +1,7 @@
 httpx
 chess
--e git+ssh://git@github.com/vphpersson/chess_com_extractor.git#egg=chess_com_extractor
--e git+ssh://git@github.com/vphpersson/pyutils.git#egg=pyutils
--e git+ssh://git@github.com/vphpersson/terminal_utils.git#egg=terminal_utils
+git+https://github.com/vphpersson/chess_com_extractor.git#egg=chess_com_extractor
+git+https://github.com/vphpersson/typed_argument_parser.git#egg=typed_argument_parser
+git+https://github.com/vphpersson/pyutils.git#egg=pyutils
+git+https://github.com/vphpersson/terminal_utils.git#egg=terminal_utils
 graphviz

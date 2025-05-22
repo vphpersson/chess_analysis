@@ -3,7 +3,7 @@ from argparse import ArgumentError
 from pathlib import Path
 from typing import Optional, Type
 
-from pyutils.argparse.typed_argument_parser import TypedArgumentParser
+from typed_argument_parser import TypedArgumentParser
 
 
 class ChessAnalysisArgumentParser(TypedArgumentParser):
@@ -65,8 +65,8 @@ class ChessAnalysisArgumentParser(TypedArgumentParser):
             type=int
         )
 
-    def parse_args(self, *args, **kwargs) -> Type[ChessAnalysisArgumentParser.Namespace]:
-        namespace: Type[ChessAnalysisArgumentParser.Namespace] = super().parse_args(*args, **kwargs)
+    def parse_args(self, *args, **kwargs) -> ChessAnalysisArgumentParser.Namespace:
+        namespace: ChessAnalysisArgumentParser.Namespace = super().parse_args(*args, **kwargs)
 
         if namespace.trie_path is None:
             setattr(namespace, 'trie_path', Path(f'chess_trie_{namespace.player_color}.pickle'))
